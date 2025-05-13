@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>inmentor.studio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { height: 100%; scroll-behavior: smooth; font-family: sans-serif; }
+    section {
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      opacity: 0.85;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .next-btn {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: #000;
+      color: #fff;
+      padding: 1rem;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#section1">Inicio</a>
+  <a href="#section2">Filosofía</a>
+  <a href="#section3">Qué Hacemos</a>
+  <a href="#section4">Orígenes</a>
+  <a href="#section5">Problema</a>
+  <a href="#section6">Enfoque</a>
+  <a href="#section7">Áreas</a>
+  <a href="#section8">Servicios</a>
+</nav>
+
+<!-- Secciones -->
+<section id="section1">
+  <div class="overlay" style="background-image: url('img1.jpg');"></div>
+  <h1>inmentor.studio</h1>
+  <p>Innovate to amplify human potential</p>
+</section>
+
+<section id="section2">
+  <div class="overlay" style="background-image: url('img2.jpg');"></div>
+  <h2>Filosofía</h2>
+  <p>La IA no debe limitarse a automatizar tareas. En inmentor.studio habilitamos nuevas formas de pensar las organizaciones, combinando criterio humano con técnicas de detección, inferencia y sugerencia de acción.</p>
+</section>
+
+<section id="section3">
+  <div class="overlay" style="background-image: url('img3.jpg');"></div>
+  <h2>Qué Hacemos</h2>
+  <p>Diseñamos productos y servicios digitales basados en IA para ayudar a las empresas a tomar decisiones informadas y mantenerse competitivas.</p>
+</section>
+
+<section id="section4">
+  <div class="overlay" style="background-image: url('img4.jpg');"></div>
+  <h2>Orígenes</h2>
+  <p>inmentor.studio surge de profesionales con más de 25 años de experiencia que buscan enfrentar la complejidad con estructuras de razonamiento formal e IA.</p>
+</section>
+
+<section id="section5">
+  <div class="overlay" style="background-image: url('img5.jpg');"></div>
+  <h2>El Problema</h2>
+  <p>Durante décadas se digitalizaron procesos, pero no se resolvió cómo decidir en contextos fragmentados, inciertos y veloces. La IA debe permitir co-pensar, co-decidir y co-aprender.</p>
+</section>
+
+<section id="section6">
+  <div class="overlay" style="background-image: url('img6.jpg');"></div>
+  <h2>Enfoque</h2>
+  <p>No mostramos datos: colaboramos en análisis, inferencias, decisiones. Nuestras herramientas entienden contexto, interpretan patrones fragmentados y aprenden con los equipos.</p>
+</section>
+
+<section id="section7">
+  <div class="overlay" style="background-image: url('img7.jpg');"></div>
+  <h2>Áreas de Enfoque</h2>
+  <ul>
+    <li>Representación inteligente de procesos</li>
+    <li>Herramientas inteligentes para decidir mejor</li>
+    <li>Aprendizaje inteligente y personalizado</li>
+  </ul>
+</section>
+
+<section id="section8">
+  <div class="overlay" style="background-image: url('img8.jpg');"></div>
+  <h2>Servicios</h2>
+  <p>Co-gestión de decisiones complejas, detección de cuellos de botella, rediseño adaptativo, tutoría automatizada y onboarding inteligente con IA contextual.</p>
+</section>
+
+<!-- Botón flotante para avanzar -->
+<button class="next-btn" onclick="scrollNext()">↓</button>
+
+<script>
+  function scrollNext() {
+    const sections = [...document.querySelectorAll('section')];
+    const scrollPos = window.scrollY;
+    const next = sections.find(s => s.offsetTop > scrollPos + 10);
+    if (next) next.scrollIntoView({behavior: 'smooth'});
+  }
+</script>
+
+</body>
+</html>
