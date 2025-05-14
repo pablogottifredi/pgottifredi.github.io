@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>inmentor.studio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Inmentor</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html { height: 100%; scroll-behavior: smooth; font-family: sans-serif;   overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -48,42 +50,42 @@
       padding: 2rem;
       position: relative;
     }
-    #section1 h1 {
+    #studio h1 {
       font-size:6em;
     }
-    #section1 p {
+    #studio p {
       font-size: 2em;
     }
-    #section1 .title {
+    #studio .title {
       vertical-align: bottom;
       right:0;
       text-align: right;
       
     }
-    #section2 {
+    #vision {
       background-color: rgba(0,0,0,0.5);
     }
-    #section2 h2 {
+    #vision h2 {
       font-size:6em;
     }
-    #section2 p {
+    #vision p {
       font-size: 2em;
       padding-bottom: 0.5em;
     }
-    #section2 .title {
+    #vision .title {
       padding-left:2em;      
       max-width: 70vw;
     }
 
-    #section3 .title {
+    #strategy .title {
       padding-top:5em;     
       padding-bottom:2em; 
     }
-    #section3 h2 {
+    #strategy h2 {
       font-size:6em;
       text-align: center;
     }
-    #section3 {
+    #strategy {
       height: 100vh;
       color: white;
       display: flex;
@@ -95,14 +97,14 @@
     }
 
     
-    #section3 .content-wrapper {
+    #strategy .content-wrapper {
       display: flex;
       flex-direction: column;
       height: 100%;
       justify-content: space-between;
     }
 
-    #section3 .columns {
+    #strategy .columns {
       display: flex;
       flex: 0 0 75%;
       padding-right: 2rem;
@@ -110,30 +112,31 @@
       text-align: center;
     }
 
-    #section3 .column {
+    #strategy .column {
       flex: 1;
       padding:1rem;
     }
-    #section3 .columns .column h3 {
+    #strategy .columns .column h3 {
       text-align: left;
       font-size: 3rem;
       padding-bottom: 1rem;
     }
-    #section3 .columns .column p  {
+    #strategy .columns .column p  {
       font-size: 1.5rem;
       text-align: left;
       padding-bottom: 2rem;
     }
-    #section3 .info-buttons {
+    #strategy .info-buttons {
       display: flex;
       justify-content: space-between;
       flex: 0 0 25%;
       padding-right: 2rem;
       padding-left:2rem;
+      display:none;
 
     }
 
-    #section3 .info-button {
+    #strategy .info-button {
       /*background-color: rgba(0, 0, 0, 0.6);*/
       flex: 1;
       display: flex;
@@ -141,18 +144,18 @@
       padding: 1rem;
     }
 
-    #section3 .info-text strong {
+    #strategy .info-text strong {
       display: block;
       font-size: 1.1rem;
       margin-bottom: 0.3rem;
     }
 
-    #section3 .info-text p {
+    #strategy .info-text p {
       margin: 0;
       font-size: 0.9rem;
     }
 
-    #section3 .logo {
+    #strategy .logo {
       width: 40px;
       height: 40px;
       background-size: contain;
@@ -174,7 +177,7 @@
       background-image: url('logos/economist.png');
     }
 
-    #section4 {
+    #sevices {
       height: 100vh;
       color: white;
       display: flex;
@@ -186,21 +189,22 @@
       background-color: black;
     }
 
-    #section4 h2 {
+    #sevices h2 {
       height: 25vh;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 6rem;
       margin: 0;
+      text-align: center;
     }
 
-    #section4 .columns {
+    #sevices .columns {
       display: flex;
       height: 75vh;
     }
 
-    #section4  .column {
+    #sevices  .column {
       flex: 1;
       background-size: cover;
       background-position: center;
@@ -209,7 +213,7 @@
       align-items: flex-end;
       padding: 1rem;
     }
-    #section4 .column .overlay {
+    #sevices .column .overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -224,62 +228,96 @@
       z-index: 1;
     }
 
-    #section4 .column .content {
-      padding: 4rem;
+    #sevices .column .content {
       width: 100%;
       min-height: 75dvh;
       padding-top:10%;
       z-index: 100;
     }
 
-    #section4 .column h3 {
+    #sevices .column h3 {
       margin: 0 0 0.5rem 0;
       font-size: 3rem;
     }
 
-    #section4 .column p {
+    #sevices .column p {
       margin: 0;
       font-size: 1.5rem;
       padding-bottom:1rem;
     }
 
 
-    #section5 {
+    #team {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-start;
       align-items: center;
       background-color: #000;
       color: #fff;
-      height: 100vh;
       width: 100vw;
       padding: 2rem;
       box-sizing: border-box;
     }
 
-    #section5 .team, .partners, .contact {
+    #team .row {
       width: 100%;
       max-width: 1200px;
       margin-bottom: 2rem;
-    }
-
-    #section5 .photos, .logos {
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
     }
 
-    #section5 .photos img, .logos img {
+    #team .col-title {
+      width: 100%;
+      text-align: center;
+    }
+
+    #team .col-title h3 {
+      margin: 0;
+    }
+
+    #team .col-content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    #team .photos .member {
+      text-align: center;
+    }
+    #team .photos img {
       width: 100px;
       height: auto;
-      filter: brightness(0) invert(1);
+      filter: grayscale(100%)
+    }
+    #team .logos img {
+      width: 200px;
+      height: auto;
+      filter: grayscale(100%);
     }
 
-    #section5 .form-container {
+    #team .logos img {
+      height: 35px;
+      width: auto;
+    }
+
+    #team .form-container {
       width: 100%;
       height: 400px;
     }
+
+    #team .team .member a {
+      color: white;
+      text-decoration: none;
+    }
+
+    #team .team .member a:visited {
+      color: #50c9ce;
+    }
+
+
     .overlay {
       position: absolute;
       inset: 0;
@@ -309,14 +347,19 @@
       position: fixed;
       bottom: 1rem;
       right: 1rem;
+      width: 60px;
+      height: 60px;
       background: #000;
       color: #fff;
-      padding: 1rem;
       border: none;
       border-radius: 50%;
-      font-size: 1.5rem;
+      font-size: 24px;
       cursor: pointer;
       z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .video-overlay-container {
       position: relative;
@@ -345,27 +388,120 @@
       transition: opacity 0.3s ease;
     }
 
-    /*.video-overlay-container:hover .background-video {
-      display: block;
+    #us {
+      width: 100vw;
+      height: 200px;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .video-overlay-container:hover .overlay.extra-opacity {
-      opacity: 0;
-    }*/
+    #us footer p {
+      font-size: 1rem;
+      text-align: center;
+    }
+    @media (max-width: 1280px) {
+      #studio h1,
+      #vision h2,
+      #strategy h2,
+      #sevices h2 {
+        font-size: 4em;
+      }
+
+      #studio p,
+      #vision p {
+        font-size: 1.5em;
+      }
+
+      #strategy .columns .column h3 {
+        font-size: 2rem;
+      }
+
+      #strategy .columns .column p,
+      #sevices .column p {
+        font-size: 1.2rem;
+      }
+
+      #sevices .column h3 {
+        font-size: 2rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) and (orientation: portrait) {
+      #studio h1,
+      #vision h2,
+      #strategy h2,
+      #sevices h2 {
+        font-size: 2.5em;
+      }
+
+      #studio p,
+      #vision p {
+        font-size: 1.2em;
+      }
+
+      #strategy .columns .column h3 {
+        font-size: 1.5rem;
+      }
+
+      #strategy .columns .column p,
+      #sevices .column p {
+        font-size: 1rem;
+      }
+
+      #sevices .column h3 {
+        font-size: 1.5rem;
+      }
+    }
+    @media screen and (max-width: 480px) and (orientation: portrait) {
+      #strategy .columns,
+      #services .columns {
+        flex-direction: column;
+        display: flex;
+      }
+
+      #strategy .column,
+      #services .column {
+        width: 100%;
+        padding:0rem;
+      }
+
+      #strategy .info-buttons,
+      #services .info-buttons {
+        flex-direction: column;
+      }
+
+      #strategy .info-button,
+      #services .info-button {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+    @media screen and (max-width: 480px) and (orientation: portrait) {
+      .mobile-hidden { display: none!important; }
+      .mobile-only { display: block; }
+    }
+
+    @media (min-width: 769px) {
+      .mobile-hidden { display: block; }
+      .mobile-only { display: none!important; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="#section1">Studio</a>
-  <a href="#section2">Visión</a>
-  <a href="#section3">Estrategia</a>
-  <a href="#section4">Servicios</a>
-  <a href="#section5">Equipo</a>
+  <a href="#studio">Studio</a>
+  <a href="#vision">Visión</a>
+  <a href="#strategy">Estrategia</a>
+  <a href="#sevices">Servicios</a>
+  <a href="#team">Equipo</a>
 </nav>
 
 <!-- Secciones -->
-<section id="section1">
+<section id="studio">
 <!--   <video class="background-video" muted loop preload="none" playsinline autoplay>
     <source src="./img/bgtest.mp4" type="video/mp4"/>
     Tu navegador no soporta el elemento de video.
@@ -377,7 +513,7 @@
   </div>
 </section>
 
-<section id="section2">
+<section id="vision">
   <video class="background-video" muted loop preload="none" playsinline autoplay>
     <source src="./img/bg2.mp4" type="video/mp4"/>
     Tu navegador no soporta el elemento de video.
@@ -404,7 +540,7 @@
 
   </section>
 
-<section id="section3">
+<section id="strategy">
   <video class="background-video" muted loop preload="none" playsinline autoplay>
     <source src="./img/bg4.mp4" type="video/mp4"/>
     Tu navegador no soporta el elemento de video.
@@ -418,18 +554,25 @@
     <div class="columns">
       <div class="column">
         <h3>Orígenes</h3>
-        <p>Décadas de <strong>experiencia ejecutiva</strong> representando sistemicamente procesos organizacionales operativos y estratégicos.</p> 
-        <p>Conformado por profesionales de las areas de <strong>tecnologia</strong>, emprendedurismo, educaci&oacute;n, <strong>innovaci&oacute;n e inteligencia artificial</strong> </p>
+        <p class="mobile-hidden">Décadas de <strong>experiencia ejecutiva</strong> representando sistemicamente procesos organizacionales operativos y estratégicos.</p> 
+        <p class="mobile-hidden">Conformado por profesionales de las areas de <strong>tecnologia</strong>, emprendedurismo, educaci&oacute;n, <strong>innovaci&oacute;n e inteligencia artificial</strong> </p>
+        <p class="mobile-only">Conformado por profesionales de las areas de <strong>tecnologia</strong>, <strong>innovaci&oacute;n e inteligencia artificial</strong> </p>
+
       </div>
       <div class="column">
         <h3>Punto de Inflexi&oacute;n</h3>
-        <p>La digitalización resolvió tareas, pero no decisiones. </p>
-        <p>La <strong>IA actual</strong> permite trabajar con datos parciales, inferir patrones y <strong>delegar decisiones simples</strong>, reservando el pensamiento estratégico a los humanos.</p> <p>Las reglas deterministas ya no son una limitación de escala para representar flujos de trabajo; <strong>es posible avanzar</strong> en la sistematización de <strong>procesos</strong> mediante enfoques basados en inferencia, <strong>capaces de adaptarse a contextos difusos y dinámicos.</strong></p>
+        <p class="mobile-hidden">La digitalización resolvió tareas, pero no decisiones. </p>
+        <p class="mobile-hidden">La <strong>IA actual</strong> permite trabajar con datos parciales, inferir patrones y <strong>delegar decisiones simples</strong>, reservando el pensamiento estratégico a los humanos.</p> 
+        <p class="mobile-hidden">Las reglas deterministas ya no son una limitación de escala para representar flujos de trabajo; <strong>es posible avanzar</strong> en la sistematización de <strong>procesos</strong> mediante enfoques basados en inferencia, <strong>capaces de adaptarse a contextos difusos y dinámicos.</strong></p>
+        <p class="mobile-only">La <strong>IA actual</strong> permite trabajar con datos parciales, inferir patrones y <strong>delegar decisiones simples</strong></p>
       </div>
       <div class="column">
         <h3>Qu&eacute; hacemos</h3>
-        <p>Diseñamos <strong>trabajadores sinteticos</strong>  que se integran a los <strong>equipos de trabajo existentes.</strong> <p>Nuestros agentes  entienden procesos, sugieren acciones y aprenden del uso cotidiano.</p><p> <strong>Co-gestionan la toma de decisi&oacute;n </strong>basado en reglas e incorporan el <strong>control del humano como base de su diseño</strong></p>
-        <p>Asesoramos en la <strong>implementaci&oacute;n de proyectos</strong> basados con uso intensivo de Inteligencia Artifical enfocados en los procesos de mayor <strong>impacto estrat&eacute;gico</strong></p>
+        <p class="mobile-hidden">Diseñamos <strong>trabajadores sinteticos</strong>  que se integran a los <strong>equipos de trabajo existentes.</strong> <p>Nuestros agentes  entienden procesos, sugieren acciones y aprenden del uso cotidiano.</p>
+        <p class="mobile-hidden"> <strong>Co-gestionan la toma de decisi&oacute;n </strong>basado en reglas e incorporan el <strong>control del humano como base de su diseño</strong></p>
+        <p class="mobile-hidden">Asesoramos en la <strong>implementaci&oacute;n de proyectos</strong> basados con uso intensivo de Inteligencia Artifical enfocados en los procesos de mayor <strong>impacto estrat&eacute;gico</strong></p>
+        <p class="mobile-only">Asesoramos en la <strong>implementaci&oacute;n de proyectos</strong> basados con uso intensivo de Inteligencia Artifical</p>
+
       </div>
     </div>
 
@@ -459,7 +602,7 @@
   </div>
 </section>
 
-<section id="section4">
+<section id="sevices">
   <h2>Servicios  Especializados</h2>
   <div class="columns">
     <div class="column" style="background-image: url('./img/bg51.png');">
@@ -467,12 +610,18 @@
 
       <div class="content">
         <h3>Representación de procesos de decisi&oacute;n con IA</h3>
-        <p>Co-gesti&oacute;n  en la toma de <strong>decisiones complejas</strong> o en <strong>procesos de cambio organizacional</strong></p>
-        <p>Aplicamos <strong>estructuras formales de an&aacute;lisis</strong> a escenarios reales y automatizamos la colecta de informaci&oacute;n fragmentada</p>
-        <p>Acompa&ntilde;amos la toma de decisiones de forma conjunta con el humano, <strong>contextualizada y evolutiva</strong> para optimizar los <strong>KPI</strong> definidos</p>
+        <p class="mobile-only">Co-gesti&oacute;n  en la toma de <strong>decisiones complejas</strong> o en <strong>procesos de cambio organizacional</strong></p>
+        <p class="mobile-hidden">Aplicamos <strong>estructuras formales de an&aacute;lisis</strong> a escenarios reales y automatizamos la colecta de informaci&oacute;n fragmentada</p>
+        <p class="mobile-only">Acompa&ntilde;amos la toma de decisiones de forma conjunta con el humano, <strong>contextualizada y evolutiva</strong> para optimizar los <strong>KPI</strong> definidos</p>
+        
+        <h3 class="mobile-only">Flujos de trabajo con informaci&oacute;n difusa</h3>
+        <p class="mobile-only">Utilizamos <strong>modelos de razonamiento</strong> para identificar <strong>cuellos de botella, conflictos no explicitos o disfunciones relacionales</strong> </p>
+        <h3 class="mobile-only">Aprendizaje personalizado y asistente experto</h3>
+        <p class="mobile-only">Creamos soluciones de <strong>formaci&oacute;n adaptativa</strong> y <strong>asistiencia cognitiva</strong></p>
+
       </div>
     </div>
-    <div class="column" style="background-image: url('./img/bg52.png');">
+    <div class="mobile-hidden column " style="background-image: url('./img/bg52.png');">
       <div class="overlay"></div>
       <div class="content">
         <h3>Flujos de trabajo con informaci&oacute;n difusa</h3>
@@ -480,7 +629,7 @@
         <p><strong>Capturamos informaci&oacute;n desestucturada</strong> del usuario, utilizamos <strong>modelos generativos</strong> para extracci&oacute;n de variables y contexto, identificamos circuitos de resoluci&oacute;n asociados y efectuamos la <strong>distrubici&oacute;n autom&aacute;tica</strong> a responsables o sistemas</p>
       </div>
     </div>
-    <div class="column" style="background-image: url('./img/bg53.png');">
+    <div class="column mobile-hidden" style="background-image: url('./img/bg53.png');">
       <div class="overlay"></div>
       <div class="content">
         <h3>Aprendizaje personalizado y asistente experto</h3>
@@ -492,47 +641,73 @@
   </div>
 </section>
 
-<section id="section5">
-  <div class="team">
-    <h3>Quiénes somos</h3>
-    <div class="photos">
-      <img src="./img/founder.jpg" alt="Founder">
-      <img src="./img/collab1.jpg" alt="Colaborador 1">
-      <img src="./img/collab2.jpg" alt="Colaborador 2">
+<section id="team">
+  <!-- Quiénes somos -->
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="col-content photos">
+      <div class="member">
+        <img src="./img/pablogottifredi.png" alt="Pablo Gottifredi">
+        <h3>Pablo Gottifredi</h3>
+        <p>Partner</p>
+        <a href="https://www.linkedin.com/in/pablogottifredi" target="_blank">LinkedIn</a>
+      </div>
+      <div class="member">
+        <img src="./img/cristinagottifredi.png" alt="Cristina Gottifredi">
+        <h3>Cristina Gottifredi</h3>
+        <p>Business Associate</p>
+        <a href="https://www.linkedin.com/in/cristina-gottifredi-5b4200323/" target="_blank">LinkedIn</a>
+      </div>
     </div>
   </div>
 
-  <div class="partners">
-    <h3>Partners</h3>
-    <div class="logos">
-      <img src="./img/partner1.svg" alt="Partner 1">
-      <img src="./img/partner2.svg" alt="Partner 2">
-      <img src="./img/partner3.svg" alt="Partner 3">
+  <!-- Aliados Tecnológicos -->
+  <div class="row">
+    <div class="col-title"><h3>Aliados Tecnológicos</h3></div>
+  </div>
+  <div class="row">
+    <div class="col-content logos">
+      <a target="_blank" href="site.matchit.com.br"><img src="./img/partner1.png" alt="Match IT"></a>
+      <a target="_blank" href="#"><img src="./img/partner2.png" alt="Partner 2"></a>
+      <a target="_blank" href="#"><img src="./img/partner3.png" alt="Partner 3"></a>
     </div>
   </div>
 
-  <div class="contact">
-    <h3>Contacto</h3>
-    <div class="form-container">
-      <!-- Reemplaza FORM_ID con el ID de tu formulario de Typeform -->
-      <div data-tf-widget="FORM_ID" data-tf-opacity="0" data-tf-hide-headers data-tf-hide-footer style="width: 100%; height: 100%;"></div>
-      <script src="https://embed.typeform.com/next/embed.js"></script>
+  <!-- Contacto -->
+  <div class="row">
+      <div class="col-title" style="display:none;"><h3>Contacto</h3></div>
     </div>
-  </div>
-</section>
+    <div class="row">
+      <div class="" style="min-width: 800px;">
+        <div data-tf-live="01JV81ZY5EYTN6GVJNNQ5QDH2Z"></div>
+        <script src="//embed.typeform.com/next/embed.js"></script>
+      </div>
+    </div>
+  </section>
 
-<!-- Botón flotante para avanzar -->
-<button class="next-btn" onclick="scrollNext()">↓</button>
+  <section id="us">
+    <footer>
+      <p>&copy; 2025 inmentor.studio</p>
+    </footer>
+  </section>
 
+  <!-- Botón flotante para avanzar -->
+<button class="next-btn" onclick="scrollNext()">
+  <i class="fas fa-arrow-down"></i>
+</button>
 <script>
+  let currentSectionIndex = 0;
+
   function scrollNext() {
-    const sections = [...document.querySelectorAll('section')];
-    const scrollPos = window.scrollY;
-    const next = sections.find(s => s.offsetTop > scrollPos + 10);
-    if (next) next.scrollIntoView({behavior: 'smooth'});
+    const sections = Array.from(document.querySelectorAll('section'));
+    if (currentSectionIndex < sections.length - 1) {
+      currentSectionIndex++;
+      sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+    }
   }
   document.addEventListener('DOMContentLoaded', function () {
-    const container = document.querySelector('#section2');
+    const container = document.querySelector('#vision');
     const video = container.querySelector('.background-video');
     const image = container.querySelector('.background-image');
     container.addEventListener('click', () => {
