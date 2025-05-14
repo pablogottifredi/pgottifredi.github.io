@@ -2,13 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.9"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <title>Inmentor</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html { height: 100%; scroll-behavior: smooth; font-family: sans-serif;   overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+    html {
+      font-size: 90%; /* o 87.5% (equivale a ~14px si el default del navegador es 16px) */
     }
     body {
       --sb-track-color: #50c9ce;
@@ -403,29 +407,27 @@
       text-align: center;
     }
     @media (max-width: 1280px) {
+      html {
+        font-size: 80%; /* Reduce base rem si estás usando rem */
+      }
+
       #studio h1,
       #vision h2,
       #strategy h2,
       #sevices h2 {
-        font-size: 4em;
+        font-size: 3.5rem !important;
       }
 
       #studio p,
-      #vision p {
-        font-size: 1.5em;
-      }
-
-      #strategy .columns .column h3 {
-        font-size: 2rem;
-      }
-
+      #vision p,
       #strategy .columns .column p,
       #sevices .column p {
-        font-size: 1.2rem;
+        font-size: 1rem !important;
       }
 
+      #strategy .columns .column h3,
       #sevices .column h3 {
-        font-size: 2rem;
+        font-size: 2rem !important;
       }
     }
 
